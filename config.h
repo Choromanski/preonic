@@ -3,6 +3,7 @@
 
 #include "config_common.h"
 
+/*
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PREONIC_SOUND)
     // #define STARTUP_SONG SONG(NO_SOUND)
@@ -14,6 +15,7 @@
 #endif
 
 #define MUSIC_MASK (keycode != KC_NO)
+*/
 
 /*
  * MIDI options
@@ -26,7 +28,7 @@
    - MIDI notes can be sent when in Music mode is on
 */
 
-#define MIDI_BASIC
+//#define MIDI_BASIC
 
 /* enable advanced MIDI features:
    - MIDI notes can be added to the keymap
@@ -38,5 +40,10 @@
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
+
+#endif
+
+#ifndef TAPPING_TERM
+#define TAPPING_TERM 200
 
 #endif
